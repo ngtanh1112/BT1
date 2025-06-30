@@ -1,0 +1,923 @@
+/* Article */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Base Styles for Desktop (≥ 992px) */
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #D6D6D6;
+    z-index: 999;
+}
+
+.site-header .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 52px 40px;
+}
+
+.logo-container img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 390px;
+    height: 37.53px;
+    z-index: 100;
+}
+
+.main-nav {
+    flex: 1;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.main-nav ul {
+    display: inline-flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.main-nav ul li a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main-nav ul li:hover {
+    border-bottom: 2px solid #000000;
+}
+
+/* Intro Block */
+.intro-block {
+    margin-top: 60px;
+    padding: 150px 0 32px;
+}
+
+.intro-block .wrapper {
+    width: 854px;
+    margin: 0 auto;
+}
+
+.intro-img img {
+    width: 100%;
+    height: 900px;
+}
+
+.intro-heading {
+    margin-bottom: 32px;
+    color: #000000;
+    font-family: New York Extra Large;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    width: 858px;
+    height: 162px;
+}
+
+.intro-subheading {
+    width: 626px;
+    margin: 0 auto 52px auto;
+    color: #000000;
+    font-family: 'SF Mono', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 170%;
+    text-align: center;
+}
+
+/* Content Block */
+.content-block {
+    margin-bottom: 80px;
+}
+
+.content-block .wrapper {
+    width: 660px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.author-social {
+    padding-top: 29px;
+    border-top: 3px solid #000000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author-info {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.author-avatar img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.author-name {
+    margin-bottom: 8px;
+    color: #000000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.post-meta {
+    color: #000000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn {
+    width: 70px;
+    padding: 13px 0;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px 0 0 4px;
+    box-shadow: 0px 1px 4px 0px #00000014;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+}
+
+.social-btn a {
+    font-size: 20px;
+    color: #000000;
+}
+
+.social-btn-last {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+    display: none;
+}
+
+.social-btn.below {
+    height: 64px;
+}
+
+.social-btn.below a {
+    font-size: 16px;
+}
+
+.article-text {
+    margin: 58px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.article-text.mobile {
+    display: none;
+}
+
+.article-text.body-text {
+    margin: 5px 0 58px 0;
+}
+
+.article-heading {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.main-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-img img {
+    width: 854px;
+    height: 570px;
+    object-fit: cover;
+}
+
+.img-caption {
+    max-width: 481px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0px auto 40px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.article-text ul li {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 17px;
+}
+
+.share-buttons {
+    display: flex;
+    align-items: center;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 32px;
+}
+
+.share-buttons .social-btn {
+    width: calc(100%/2);
+    padding: 19px 0;
+    color: #000000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-buttons .social-btn i {
+    margin-right: 16px;
+    font-size: 23px;
+}
+
+.share-buttons-mobile {
+    display: none;
+}
+
+.article-tags {
+    padding: 32px 0;
+    border-bottom: 1px dotted #000000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.article-tags a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.author-bio {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0 132px;
+}
+
+.author-bio .author-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.bio-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 25px;
+}
+
+.bio-text .author-name {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Related Block */
+.related-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 73px 0 111px;
+    border-top: 2px solid #000000;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.pattern-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pattern-icon img {
+    width: 82px;
+    height: 64px;
+}
+
+.section-heading {
+    margin-bottom: 27px;
+    font-family: 'New York Extra Large', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 304px;
+}
+
+.card-img img {
+    width: 304px;
+    height: 176px;
+    object-fit: cover;
+}
+
+.card-text {
+    width: 100%;
+    max-width: 288px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.card-text a {
+    color: #000000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.newsletter-form {
+    width: 640px;
+    height: 313px;
+    padding: 62px 51px 59px;
+    margin: 105px auto 0;
+    border: 1px solid #000000;
+    border-top: 8px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-heading {
+    text-align: center;
+    font-family: 'New York Extra Large', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.form-text {
+    text-align: center;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+    max-width: 538px;
+    margin: 0 auto 36px;
+}
+
+.newsletter-form form {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+.email-input {
+    padding: 15px 16px;
+    border: 1px solid #000000;
+    flex: 1;
+    outline: none;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.newsletter-form button {
+    padding: 15px 24px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #000000;
+    padding: 18px 0 32px;
+    width: 100%;
+}
+
+.footer-top img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.footer-middle .wrapper {
+    width: 488px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-top: 105.12px;
+    text-align: center;
+    margin-bottom: 25.58px;
+}
+
+.footer-text {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 25px;
+}
+
+.footer-bottom {
+    margin-top: 32px;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.footer-links ul a {
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 170%;
+}
+
+.footer-copyright {
+    margin-top: 32px;
+    /* Giảm margin-top để tránh khoảng cách quá lớn */
+    color: #ffffff;
+    text-align: center;
+    line-height: 140%;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 16px;
+}
+
+/* --- Responsive (Tablet & Mobile) --- */
+@media (max-width: 991px) {
+
+    /* Header Styles */
+    .site-header {
+        padding: 30px 0;
+    }
+
+    .site-header .wrapper {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    .logo-container img {
+        width: 320px;
+        height: auto;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-nav .is-active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .intro-block {
+        padding: 70px 0 16px;
+    }
+
+    .intro-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .social-btn-last {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .intro-block .wrapper,
+    .content-block .wrapper,
+    .related-block .wrapper,
+    .newsletter-form,
+    .footer-middle .wrapper {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .related-block .wrapper {
+        position: relative;
+    }
+
+    .related-block {
+        margin-bottom: 0px;
+        padding-bottom: 60px;
+    }
+
+    .intro-heading {
+        font-size: 36px;
+        line-height: 120%;
+        width: 100%;
+        height: auto;
+    }
+
+    .intro-subheading {
+        font-size: 16px;
+        font-size: 16px;
+        line-height: 1.6;
+        width: 100%;
+        margin: 0 auto 24px;
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .article-card {
+        width: 100%;
+        max-width: 304px;
+        margin: 0 auto;
+    }
+
+    .article-text {
+        font-size: 16px;
+        line-height: 28px;
+        margin: 32px 0;
+    }
+
+    .main-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-caption {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 8px auto 32px;
+    }
+
+    .social-buttons {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .social-btn {
+        width: calc(100% / 3);
+    }
+
+    .share-buttons {
+        display: none;
+    }
+
+    .share-buttons-mobile {
+        display: block;
+    }
+
+    .newsletter-form {
+        height: 100%;
+    }
+
+    .newsletter-form {
+        padding: 32px 16px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .newsletter-form form {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .newsletter-form .email-input {
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .footer-top img {
+        width: 100%;
+        /* Khắc phục kích thước hình ảnh footer */
+        height: 28px;
+    }
+
+    .footer-middle .wrapper {
+        width: 100%;
+        max-width: 640px;
+        padding: 0 16px;
+    }
+
+    .footer-logo img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .footer-copyright {
+        font-size: 10px;
+        /* Giảm font-size cho mobile */
+        margin-top: 24px;
+        padding: 8px 16px;
+    }
+}
+
+/* --- Mobile Specific (<= 768px) --- */
+@media (max-width: 768px) {
+    .site-header .wrapper {
+        max-width: 100%;
+        /* Đảm bảo header không vượt quá viewport */
+        padding: 0 10px;
+    }
+
+    .logo-container img {
+        width: 320px;
+        /* Giảm thêm kích thước logo */
+        height: auto;
+    }
+
+    .article-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .intro-heading {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .intro-subheading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .main-nav {
+        text-align: center;
+    }
+
+    .article-card:nth-child(n+4) {
+        display: none;
+    }
+
+    .article-text {
+        display: none;
+    }
+
+    .article-text.mobile {
+        display: block;
+    }
+
+    .footer-links ul {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .footer-copyright {
+        font-size: 10px;
+        line-height: 1.4;
+        margin-top: 20px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 440px) {
+    .logo-container img {
+        width: 100%;
+        max-width: 217px;
+    }
+
+    .social-btn {
+        height: 54px;
+    }
+
+    .social-btn a {
+        font-size: 20px;
+    }
+
+    .social-btn.below {
+        height: 54px;
+    }
+
+    .social-btn.below a {
+        font-size: 20px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        opacity: 1;
+    }
+
+    .section-heading {
+        font-family: 'New York Extra Large';
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .article-card:nth-child(n+4) {
+        display: none;
+    }
+
+    .form-heading {
+        font-family: 'New York Extra Large';
+        font-size: 29px;
+    }
+
+    .form-text {
+        width: 320px;
+        font-size: 16px;
+    }
+
+    .newsletter-form form {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .newsletter-form form input {
+        height: 54px;
+        width: 283px;
+        margin-right: 0;
+    }
+
+    .email-input {
+        font-size: 16px;
+    }
+
+    .newsletter-form {
+        border-bottom: 2px solid black;
+        width: 100%;
+    }
+
+    .newsletter-form form button {
+        height: 54px;
+        width: 108px;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .card-img img {
+        width: 335px;
+        height: 194px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .logo-container img {
+        width: 217px;
+        height: 20px;
+        max-width: 100%;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        opacity: 1;
+    }
+
+    .intro-heading {
+        width: 335px;
+        font-size: 36px;
+    }
+
+    .intro-subheading {
+        width: 335px;
+        font-size: 16px;
+        line-height: 170%;
+    }
+
+    .intro-img img {
+        width: 100%;
+        height: 235px;
+
+    }
+
+    .content-block .wrapper {
+        width: 367px;
+    }
+
+    .social-btn {
+        height: 46px;
+    }
+
+    .main-img img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .img-caption {
+        width: 345px;
+    }
+
+    .social-btn.below {
+        height: 54px;
+    }
+
+    .article-tags {
+        font-size: 14px;
+        width: 210px;
+    }
+
+    .pattern-icon img {
+        width: 65.6px;
+        height: 52px;
+    }
+
+    .section-heading {
+        font-family: 'New York Extra Large';
+        font-size: 32px;
+    }
+
+    .card-img img {
+        width: 335px;
+        height: 194px;
+    }
+
+    .footer-middle .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text {
+        width: 287px;
+    }
+}
