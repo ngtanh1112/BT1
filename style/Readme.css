@@ -26,7 +26,6 @@ body {
     font-family: 'New York Extra Large';
     font-size: 200px;
     font-weight: 700;
-    display: inline;
 }
 
 .header>.version,
